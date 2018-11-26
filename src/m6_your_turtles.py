@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Alex Hinojosa.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +28,28 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+window = rg.TurtleWindow()
+red_turtle= rg.SimpleTurtle('turtle')
+red_turtle.pen = rg.Pen('orange', 3)
+red_turtle.speed = 10
+yellow_turtle= rg.SimpleTurtle('turtle')
+yellow_turtle.pen = rg.Pen('yellow', 3)
+yellow_turtle.speed = 10
+
+for k in range(5):
+    red_turtle.draw_circle(100)
+    red_turtle.pen_up()
+    red_turtle.right(90)
+    red_turtle.forward(5)
+    red_turtle.left(90)
+    red_turtle.pen_down()
+for k in range(5):
+    yellow_turtle.draw_square(200)
+    yellow_turtle.pen_up()
+    yellow_turtle.right(90)
+    yellow_turtle.forward(5)
+    yellow_turtle.left(90)
+    yellow_turtle.pen_down()
+
+
